@@ -1,4 +1,5 @@
 import { Box, Grid, Paper, Typography } from "@mui/material";
+import "../common/Scroll.css";
 import React, { useEffect } from "react";
 import Conversations from "./Conversations";
 import { useSelector } from "react-redux";
@@ -73,13 +74,18 @@ function ChatAside() {
                 textAlign="center"
                 fontSize={{ sm: "1.25rem" }}
                 fontWeight={500}
-                sx={{ color: "text.primary", mt: -5 }}      
+                sx={{ color: "text.primary", mt: -5 }}
               >
                 Messaging
               </Typography>
             </Paper>
             <Box width="100%" sx={{ mt: "70px" }}></Box>
-            <Box width="90%" m="0px auto">
+            <Box
+              className="scrollbar-hidden"
+              width="90%"
+              m="0px auto"
+              sx={{ overflow: "scroll" }}
+            >
               {conversation.map((data, index) => (
                 <Box
                   key={index}

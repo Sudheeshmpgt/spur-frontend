@@ -9,7 +9,7 @@ import './Scroll.css'
 import Messages from './Messages';
 import io from 'socket.io-client'
 
-const ENDPOINT = "http://localhost:9000";
+const ENDPOINT = "https://spur-backend.herokuapp.com";
 var socket, selectedChatCompare;
 
 function MessengerDetails() {

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-    baseURL:'http://localhost:9000/'
+    baseURL:'https://spur-backend.herokuapp.com/'
 });
 
 // instance.defaults.headers.common['Authorisation'] = 'Auth from instance'
